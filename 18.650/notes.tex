@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\title{Stat 110}
+\author{Notes by Edward Chen}
+\date{October 2022}
+
+\begin{document}
+    \maketitle
+    \section*{Preface}
+
+These are my notes to Harvard's Stat 110 class,
+taught by Joseph Blitzstein and Jessica Hwang. The class covers all the basics of probability--counting principles,
+probabilistic events, random variables, distributions, conditional probability, expectation, and Bayesian inference.\\
+
+    Compared to other notes, this should not be used as a whole subsititue for the class, rather as an indication of the more complex topics covered.
+    Put harsher, I will likely spend less time note taking on things I already know and more on things I'm confused out. For clarity's sake,
+    I am pretty comfortable with probability from my competition math background.
+
+    Lecture videos are freely available at 
+
+
+    \section{Chapter 1}
+
+    Probability gives us a logical framework to view and anlyze uncertaintiy. It is the foundation and language for statistic ass well as the basis
+        for topics such as Statistics, Physics, Biology, and Computer science.\\\\
+
+    A \textbf{sample space} $S$ is the set of all theoretically possible outcomes.\\\\
+
+    Let $D$ be the set of all coin flips with at least two consecutive heads. The sameple space,
+     expressed as a set would be:
+        $$D = \cup_{j=1}^9(A_j\cap A_{j+1})$$
+
+    Some more set notation:\\
+        sameple space: $S$\\
+        s is a possible outcome: $s\in S$\\
+        A is an event: $A 17 S$\\
+        A implies B: \\
+        A and B are mutually exclusive: $A\cap B = \emptyset$\\\\
+
+    Example 1.4.10: Birthday Problem
+
+    $\textbf{Theorem 1.4.15}$ (Binomial coefficient formula). For $k\le n$, we have:
+    $$ {n\choose k} = \frac{n(n-1)...(n-k+1)}{k!} = \frac{n!}{(n-k)!k!}$$
+
+    Some proof methods covered in the chapter include complementary counting, stars and bars, and story proofs(1.5).\\
+
+    There are a lot of formulas with binomial coefficients:\\
+        $${n\choose k} = {n-k\choose k}$$\\
+        $$(x+y)^n = \sum_{k=0}^n {n\choose k}x^ky^{n-k}$$\\
+        $$n{n-1 \choose k-1} = k{n\choose k}$$\\
+        $$\textrm{Vandermonde's}: {m+n\choose k}= \sum_{j=0}^k{m\choose j}{n\choose k-j}$$
+
+    $\textbf{Example 1.5.4}$(Partnerships). Let's prove\\
+
+    $$\frac{(2n)!}{2^n\cdot n!}=(2n-1)(2n-3)...3\cdot1$$
+
+    $\textit{Story proof:}$: We will show that both sides count the number of ways to break $2n$
+        people into n partnerships. Take $2n$ people, and give them ID numbers from 1 to $2n$. We can form
+        partnerships by lining up the people in some order and then saying the first two
+        are a pair, the next two are a pair, etc. This overcounts by a factor of $n!\cdot 2^n$ since 
+        the order of pairs doesn't matter, nor does the order within each pair. Alternaitvely, count the 
+        number of possibilities by noting that there are $2n-1$ choices for the parnter of person 1, then
+        $2n-3$ choices for person 2, and so on.
+
+    $\textbf{Definition 1.6.1}$ (General definition of probability). A $\textit{probability space}$ consists of a sample 
+        space $S$ and a $\textit{probability function } P$ and returns a real number between 0 and 1, $P(A)$, where 
+        $A$ is the event it takes in.
+
+    Unlike the naive definition, here we can have events with different probabilities.
+    
+    The $\textit{frequentist}$ view of probability is that it represents a long-run frequency over
+        a large number of repetitions of an experiment. The $\textit{Bayesian view}$ is that it represents a
+        degree of belief about the event in question, so we can assign probabilities to hypotheses.
+
+    Inclusion-exclusion example: With a triple venn diagram, we can write:
+    $$P(A\cup B\cup C)=P(A)+P(B)+P(C) - P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cup B \cup C)$$
+    
+    Generally, we can write:
+
+
+
+    $\textbf{Example 1.6.4}$ (de Montmort's matching problem). Consider a shuffled deck of $n$ cards, from 1 to n.
+    You flip each one over one by one. What is the probability the $i$th index card
+    you turn over has value $i$?
+
+    With PIE, we get $$P(\cup_{i=1}^n A_i)=\frac{n}{n}-\frac{{n\choose 2}}{n(n-1)}
+    +\frac{{n\choose 3}}{n(n-1)(n-2)}- ...+(-1)^{n+1}\cdot\frac{1}{n!}$$\\
+    $$= 1-\frac{1}{2!}+\frac{1}{3!}-...+(-1)^{n+1}\cdot\frac{1}{n!}$$
+
+    With large $n$, this approaches the Taylor series for $\frac{1}{e}$:
+
+    $$e^{-1}=1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+...$$\\\\
+
+    $\textbf{R}$: Please read section 1.8 for an introduction to R. R allows us to simulate and deal with large sets of data.
+
+        
+
+
+    
+\end{document}
+
