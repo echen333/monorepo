@@ -93,9 +93,57 @@ probabilistic events, random variables, distributions, conditional probability, 
 
     $\textbf{R}$: Please read section 1.8 for an introduction to R. R allows us to simulate and deal with large sets of data.
 
-        
-
-
+    \pagebreak
     
+    \section{Chapter 2: Conditional Probability}
+
+    $\textit{Conditional Probability}$ explores how we should update our probability when we receive new information.
+
+    $\textbf{Definition 2.2.1}$. If $A$ and $B$ are events with $P(B)>0$, then conditional probability can be expressed as:
+    $$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
+
+    $\textbf{Example 2.2.5}$(Two Children): Martin Gardner posed the following puzzle:\\
+    $\textit{Mr. Jones has two children. The older hild is a girl. What is the probability that both children are girls?}$\\
+    $\textit{Mr. Smith has two children. At least one of them is aboy. What is the probability that both children are boys?}$\\
+
+    The intuition is that they should both be $\frac{1}{2}$, but the respesctive probabilities are actually $\frac{1}{2}$ and $\frac{1}{3}$.\\\\
+
+    $\textbf{Theorem 2.23}$ (Bayes' rule).
+    $$P(A|B)=\frac{P(A\cap B)}{B}=\frac{P(B|A)P(A)}{P(B)}$$
+
+    $\textbf{Definition 2.3.4}$ (Odds). The $\textit{odds}$ of an event A are
+
+    $$\textrm{odds(A)}=P(A)/P(A^c)$$. Ex.: if $P(A)=2/3$, we say the odds in favor of A are 2 to 1.
+
+    $\textbf{Theorem 2.3.5}$ (Odds form of Bayes' rule)
+
+    $\textbf{Example 2.4.5}$ (Unanimous agreement). The artaicle "Why too much evidence can be a bad thing" by Lisa Zyga says:\\
+
+    $\textit{Under ancient Jewish law, if a suspect on trial was unanimously found guilty by all judges, then the suspect was acquitted. This reasoning
+    sounds counterintuitive, but the legislators of teh time had noticed that unanimous agreement often indicates the presence of systemic error in 
+    the judicial process}.$
+
+    This is because a systemic error occurs independet of the conviction, so there may be an unseen bias at play here.
+
+    $\textbf{Independence}$
+
+    Events $A$ and $B$ are $\textit{independent}$ if $P(A\cap B) = P(A)P(B)$.
+
+    For infinitely many events, we say that they are independent if every finite subset of the events is independent.
+
+    $\textbf{Definition 2.5.7}$ (Conditional independence). Events $A$ and $B$ are said to be $\textit{conditionally independent}$ given $E$ if $P(A\cap B|E) = P(A|E)P(B|E)$.
+
+    \begin{quote}
+    It is easy to make terrible blunders stemming from confusing independence and conditional independence. Two events can be conditionally independence given $E$, but not independent given $E^c$. Two events
+    can be conditionally independent given $E$, but not independent. Two events can be independent, but not conditionally independent given $E$.
+    Great care is needed
+    \end{quote}
+
+    todo: 65-67
+
+    An important property of Bayes' rule is that is is $coherent$: for the same updates, no matter the update size, the final state should be the same.
+
+    todo: 68-75
+
 \end{document}
 
