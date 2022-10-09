@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1665060903 "/Users/edwardchen/Fall Projects/monorepo/18.650/notes.tex" "notes.pdf" "notes" 1665060904
-  "/Users/edwardchen/Fall Projects/monorepo/18.650/notes.tex" 1665060903 10728 6cfff77b8ccd50f318e3063089350635 ""
+["pdflatex"] 1665083989 "/Users/edwardchen/Fall Projects/monorepo/18.650/notes.tex" "notes.pdf" "notes" 1665083989
+  "/Users/edwardchen/Fall Projects/monorepo/18.650/notes.tex" 1665083989 10742 97ad63bbdf51c80b607996a07d6e30d7 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -34,8 +34,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664349360 2826440 16af7b30b6319f91c39ca2b79ec4bdd6 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "notes.aux" 1665060903 366 1bbcfe21b01ddaf449b1d2e039ca8e23 "pdflatex"
-  "notes.tex" 1665060903 10728 6cfff77b8ccd50f318e3063089350635 ""
+  "notes.aux" 1665083989 366 1bbcfe21b01ddaf449b1d2e039ca8e23 "pdflatex"
+  "notes.tex" 1665083989 10742 97ad63bbdf51c80b607996a07d6e30d7 ""
   (generated)
   "notes.aux"
   "notes.log"
