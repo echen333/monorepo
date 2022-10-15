@@ -223,5 +223,39 @@ probabilistic events, random variables, distributions, conditional probability, 
 
     \section{Continous}
 
+    We've learned about DPFs, but now we want can say similar things about $\textbf{probability density functions}$, or PDFs. In fact, to they are easily using the Fundamental Theorem of Calculus in that to get a PDF is just to take the derivative of DPF's.\\
+
+    \subsection*{Variance}
+
+    $\textbf{Definition 4.2.1}$ (Variance). The $\textbf{variance}$ of a random variable $X$ is defined as:
+    $$Var(X) = E[(X-EX)^2] = Ex^2 - (Ex)^2$$
+
+    Something more intereprable is standard deviation: $\sigma = \sqrt{Var(X)}$.\\
+
+    But how do we actually find $Ex^2$? We can use the Fundamental Theorem of Calculus to get:
+
+    $$Ex^2 = \int_{-\infty}^{\infty} x^2f_X(x)dx$$
+
+    Generally, this is called the Law of the Unconscious Statistician(LOTUS):
+
+    $$E(g(x)) = \int_{-\infty}^{\infty} g(x)f_X(x)dx$$
+
+    \subsection*{Uniform and Universality of the Uniform}
+
+    Given being able to produce random variables from a uniform distribution, we can produce any other distribution.\\
+
+    The proof follows that if we let F be the CDF of $X$, then $F^{-1}(u) \sim F$ if $U\sim $ Unif(0,1). The intuition is that we plug a random variable into its own CDF.\\
+
+    \subsection*{Normal Distribution}
+
+    The normal distribution is a very important distribution that is used to model many things. It is defined by two parameters, $\mu$ and $\sigma^2$. The PDF is given by:
+
+    $$f_X(x) = ce^{-\frac{z^2}{2}} = \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+
     
+    Central Limit Theorem: the sum of independent random variables tends to a normal distribution.\\
+
+    Main intution here is that we can actually integrate the definite integral of $ce^{-\frac{z^2}{2}}$ using polar coordinates to get $\frac{1}{\sqrt{2\pi}}$.\\ 
+
+
 \end{document}
