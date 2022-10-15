@@ -187,7 +187,41 @@ probabilistic events, random variables, distributions, conditional probability, 
     Hypergeometric distributions are very similar to binomial distrbutions in that they take on $n$ Bernoulli trials, but note that hypergeometric distributions are dependent as we are drawing without replacement.\\
 
 
-    img pg 130
+    img pg 130  
 
+    $\textbf{Exercise 32}$
+    
+    In Evan's history class, 10 out of the 100 key terms will be randomly selected to appear on the quiz. Evan must then choose 7 of them to define. What is the probability distrbution of the number of terms, $X$, Evan will know on the quiz?\\
+
+    We can use the hypergeometric distribution here. We have $N=100$, $K=10$, $n=7$, and $x$ is the number of terms Evan knows.\\
+
+    \section{Chapter 4: Expectation}
+
+    Here is a fundamental derivation of binomial expectation for $X \sim Binom(n,p)$:
+
+    $$EV(X) = \sum_{k=0}^n k{n\choose k}p^kq^{n-k} = n\sum_{k=0} {n-1 \choose k-1}p^kq^{n-k} = np\sum_{j=0} {n-1 \choose k-1}p^{j}q^{n-1-j}=np$$
+
+    \subsection*{Geometric and Negative Binomial Distributions}
+
+    $\textbf{Definition 4.1.1}$ (Geometric distribution). The $\textbf{geometric distribution}$ is the probability distribution of the number of Bernoulli trials needed to get the first success.\\
+
+    $\textbf{Definition 4.1.2}$ (Negative binomial distribution). The $\textbf{negative binomial distribution}$ is the probability distribution of the number of Bernoulli trials needed to get $r$ successes.\\
+    
+    Negative binomial expectation is just given by: $E(x) = E(x_1) + E(x_2) + ... + E(x_r) = r\cdot \frac{q}{p}$.\\
+
+    \subsection*{Poission Distribution}
+
+    Poisson Distribution is a common distribution used for modeling the number of "successes" given a low-probability, high frequency event. The PMF is given a parameter $\lambda$ by:
+
+    $$P(x=k) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+
+    It is a valid PMF as $\sum_{k=0}^{\infty}P(x=k)=e^{-\lambda}\cdot e^\lambda=1$. With the same derivation as above, we can show that the expected value of a Poisson distribution is $\lambda$.\\
+
+    Connection with binomial distribution: actually converges pretty well for large $n$, small $p_j$, but here events can also be "weakly dependent," and have different $p_j$'s.\\
+
+    Poisson can be used for finding the approximate probability function of the birthday problem, where lets say  we have $n$ people and want to find probability of there is exactly $k$ triplets of people with the same birthday. We know that $EV=\lambda={n\choose 3}(\frac{1}{365})^2$ so we can create a Poisson distrbution. Notice there is some weak dependence here.\\
+
+    \section{Continous}
+
+    
 \end{document}
-
